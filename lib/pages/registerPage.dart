@@ -129,120 +129,124 @@ class _RegisterPageState extends State<RegisterPage> {
     var usersRef=_firestore.collection("userKurumId").where("members");
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                padding: EdgeInsets.only(
-                  top: 24.0,
-                ),
-                child: Text(
-                  "Yeni Hesap Oluştur",
-                  textAlign: TextAlign.center,
-
-                ),
-              ),
-              Column(
+        child: ListView(
+          children:<Widget> [
+            Container(
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CustomInput(
-                    hintText: "Email...",
-                    onChanged: (value) {
-                      _registerEmail = value;
-                    },
-                    onSubmitted: (value) {
-                      _passwordFocusNode.requestFocus();
-                    },
-                    textInputAction: TextInputAction.next,
-                  ),
-                  CustomInput(
-                    hintText: "Ad Soyad...",
-                    onChanged: (value) {
-                      _nameSurname = value;
-                    },
-                    onSubmitted: (value) {
-                      _passwordFocusNode.requestFocus();
-                    },
-                    textInputAction: TextInputAction.next,
-                  ),
-                  CustomInput(
-                    hintText: "Kurum ID...",
-                    onChanged: (value) async {
-                      var respose=await usersRef.get();
-                      var veri=respose.docs.last.get("members");
-                      var secondList = List.from(veri);
-                      for(int i=0;i<secondList.length;i++)
-                      {
-                        if(value==secondList[i])
-                        {
-                          _registerCardId = value;
-                        }
-                        else{
-                          _registerCardId="";
-                        }
-                      }
-                      //_registerCardId = value;
-                    },
-                    onSubmitted: (value) {
-                      _passwordFocusNode.requestFocus();
-                    },
-                    textInputAction: TextInputAction.next,
-                  ),
-                  CustomInput(
-                    hintText: "Şifre...",
-                    onChanged: (value) {
-                      _registerPassword = value;
-                    },
-                    focusNode: _passwordFocusNode,
-                    isPasswordField: true,
-                    textInputAction: TextInputAction.next,
-                  ),
-                  CustomInput(
-                    hintText: "Şifreyi Doğrula...",
-                    onChanged: (value) {
-                      _registerPasswordConfirm = value;
-                    },
-                    focusNode: _passwordComfirmFocusNode,
-                    isPasswordField: true,
-                  ),
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 24.0,
+                    ),
+                    child: Text(
+                      "Yeni Hesap Oluştur",
+                      textAlign: TextAlign.center,
 
-                  CustomBtn(
-                    text: "Oluştur",
-                    onPressed: () {
-                      if(_registerPassword==_registerPasswordConfirm){
-                        if(_registerCardId!="")
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      CustomInput(
+                        hintText: "Email...",
+                        onChanged: (value) {
+                          _registerEmail = value;
+                        },
+                        onSubmitted: (value) {
+                          _passwordFocusNode.requestFocus();
+                        },
+                        textInputAction: TextInputAction.next,
+                      ),
+                      CustomInput(
+                        hintText: "Ad Soyad...",
+                        onChanged: (value) {
+                          _nameSurname = value;
+                        },
+                        onSubmitted: (value) {
+                          _passwordFocusNode.requestFocus();
+                        },
+                        textInputAction: TextInputAction.next,
+                      ),
+                      CustomInput(
+                        hintText: "Kurum ID...",
+                        onChanged: (value) async {
+                          var respose=await usersRef.get();
+                          var veri=respose.docs.last.get("members");
+                          var secondList = List.from(veri);
+                          for(int i=0;i<secondList.length;i++)
                           {
-                            _submitForm();
+                            if(value==secondList[i])
+                            {
+                              _registerCardId = value;
+                            }
+                            else{
+                              _registerCardId="";
+                            }
                           }
-                        else{
-                          _alertDialogBuilder("Id yok");
-                        }
-                        //_submitForm();
-                      }
-                      else{
-                        _alertDialogBuilder("Şifreler aynı değil!");
-                      }
-                    },
-                      isLoading: _registerFormLoading,
-                  ),
+                          //_registerCardId = value;
+                        },
+                        onSubmitted: (value) {
+                          _passwordFocusNode.requestFocus();
+                        },
+                        textInputAction: TextInputAction.next,
+                      ),
+                      CustomInput(
+                        hintText: "Şifre...",
+                        onChanged: (value) {
+                          _registerPassword = value;
+                        },
+                        focusNode: _passwordFocusNode,
+                        isPasswordField: true,
+                        textInputAction: TextInputAction.next,
+                      ),
+                      CustomInput(
+                        hintText: "Şifreyi Doğrula...",
+                        onChanged: (value) {
+                          _registerPasswordConfirm = value;
+                        },
+                        focusNode: _passwordComfirmFocusNode,
+                        isPasswordField: true,
+                      ),
 
+                      CustomBtn(
+                        text: "Oluştur",
+                        onPressed: () {
+                          if(_registerPassword==_registerPasswordConfirm){
+                            if(_registerCardId!="")
+                            {
+                              _submitForm();
+                            }
+                            else{
+                              _alertDialogBuilder("Id yok");
+                            }
+                            //_submitForm();
+                          }
+                          else{
+                            _alertDialogBuilder("Şifreler aynı değil!");
+                          }
+                        },
+                        isLoading: _registerFormLoading,
+                      ),
+
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 16.0,
+                    ),
+                    child: CustomBtn(
+                      text: "Giriş Sayfasına Dön",
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      outlineBtn: true,
+                    ),
+                  ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  bottom: 16.0,
-                ),
-                child: CustomBtn(
-                  text: "Giriş Sayfasına Dön",
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  outlineBtn: true,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -93,75 +93,79 @@ class _UserLoginPageState extends State<UserLoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          width: double.infinity,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+        child: ListView(
+          children: <Widget>[
               Container(
-                child: Image.asset(
-                  'assets/images/appicon.png',
-                  height: 150.0,
-                  width: 100.0,
-                ),
-              ),
-              Container(
-                child: Text(
-                  "Hoşgeldin,\nHemen Başlayalım!",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              Column(
+              width: double.infinity,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CustomInput(
-                    hintText: "Email...",
-                    onChanged: (value) {
-                      _loginEmail = value;
-                    },
-                    onSubmitted: (value) {
-                      _passwordFocusNode.requestFocus();
-                    },
-                    textInputAction: TextInputAction.next,
+                  Container(
+                    child: Image.asset(
+                      'assets/images/appicon.png',
+                      height: 150.0,
+                      width: 100.0,
+                    ),
                   ),
-                  CustomInput(
-                    hintText: "Şifre...",
-                    onChanged: (value) {
-                      _loginPassword = value;
-                    },
-                    focusNode: _passwordFocusNode,
-                    isPasswordField: true,
-                    onSubmitted: (value) {
-                      _submitForm();
-                    },
+                  Container(
+                    child: Text(
+                      "Hoşgeldin,\nHemen Başlayalım!",
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-                  CustomBtn(
-                    text: "Giriş Yap",
-                    onPressed: () {
-                      _submitForm();
-                    },
-                    isLoading: _loginFormLoading,
-                  )
+                  Column(
+                    children: [
+                      CustomInput(
+                        hintText: "Email...",
+                        onChanged: (value) {
+                          _loginEmail = value;
+                        },
+                        onSubmitted: (value) {
+                          _passwordFocusNode.requestFocus();
+                        },
+                        textInputAction: TextInputAction.next,
+                      ),
+                      CustomInput(
+                        hintText: "Şifre...",
+                        onChanged: (value) {
+                          _loginPassword = value;
+                        },
+                        focusNode: _passwordFocusNode,
+                        isPasswordField: true,
+                        onSubmitted: (value) {
+                          _submitForm();
+                        },
+                      ),
+                      CustomBtn(
+                        text: "Giriş Yap",
+                        onPressed: () {
+                          _submitForm();
+                        },
+                        isLoading: _loginFormLoading,
+                      )
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      bottom: 16.0,
+                    ),
+                    child: CustomBtn(
+                      text: "Hesap Oluştur",
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RegisterPage()
+                          ),
+                        );
+                      },
+                      outlineBtn: true,
+                    ),
+                  ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  bottom: 16.0,
-                ),
-                child: CustomBtn(
-                  text: "Hesap Oluştur",
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => RegisterPage()
-                      ),
-                    );
-                  },
-                  outlineBtn: true,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

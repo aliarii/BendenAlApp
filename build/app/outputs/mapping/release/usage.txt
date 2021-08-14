@@ -27274,8 +27274,8 @@ com.google.common.reflect.Types$ParameterizedTypeImpl
 com.google.gson.internal.Excluder$1
 com.google.firebase.installations.interop.R$color
 kotlin.coroutines.jvm.internal.ModuleNameRetriever
-com.google.common.util.concurrent.ListenerCallQueue$PerListenerQueue
 com.google.gson.internal.bind.TypeAdapters$4
+com.google.common.util.concurrent.ListenerCallQueue$PerListenerQueue
 com.google.android.gms.dynamic.SupportFragmentWrapper
 com.google.common.util.concurrent.ForwardingListeningExecutorService
 io.flutter.plugin.editing.InputConnectionAdaptor:
@@ -29674,5 +29674,5 @@ androidx.appcompat.view.StandaloneActionMode:
     private boolean mFocusable
 io.grpc.ClientInterceptors:
     private static final io.grpc.ClientCall NOOP_CALL
-io.flutter.plugin.platform.PlatformView$-CC
 androidx.lifecycle.DefaultLifecycleObserver$-CC
+io.flutter.plugin.platform.PlatformView$-CC
