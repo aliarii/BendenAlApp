@@ -1,4 +1,4 @@
-#Sat Aug 14 19:09:54 TRT 2021
+#Sat Aug 14 19:41:19 TRT 2021
 base.0=C\:\\Users\\Ali-Asus\\Desktop\\satis\\benden_al\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
