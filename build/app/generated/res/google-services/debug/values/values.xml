@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">209734847343-rag3rpnsc2pskeqgsagpve4r4ijq36oo.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">209734847343</string>
+    <string name="google_api_key" translatable="false">AIzaSyAPRNtl0ksKR3TCyx_xO426CrK9A1G2SdI</string>
+    <string name="google_app_id" translatable="false">1:209734847343:android:59ec4e71e16ede57db369a</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAPRNtl0ksKR3TCyx_xO426CrK9A1G2SdI</string>
+    <string name="google_storage_bucket" translatable="false">bendenal-d507d.appspot.com</string>
+    <string name="project_id" translatable="false">bendenal-d507d</string>
+</resources>

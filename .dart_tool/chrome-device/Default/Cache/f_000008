@@ -1,0 +1,463 @@
+define(['dart_sdk', 'packages/firebase_core/firebase_core.dart', 'packages/flutter/src/widgets/async.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/firebase_auth/firebase_auth.dart', 'packages/benden_al/pages/userLoginPage.dart', 'packages/benden_al/others/listNewAdPage.dart'], (function load__packages__benden_al__pages__landingPage_dart(dart_sdk, packages__firebase_core__firebase_core$46dart, packages__flutter__src__widgets__async$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__firebase_auth__firebase_auth$46dart, packages__benden_al__pages__userLoginPage$46dart, packages__benden_al__others__listNewAdPage$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const firebase_core = packages__firebase_core__firebase_core$46dart.firebase_core;
+  const async$ = packages__flutter__src__widgets__async$46dart.src__widgets__async;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const firebase_auth = packages__firebase_auth__firebase_auth$46dart.firebase_auth;
+  const userLoginPage = packages__benden_al__pages__userLoginPage$46dart.pages__userLoginPage;
+  const homePage = packages__benden_al__others__listNewAdPage$46dart.pages__homePage;
+  var landingPage = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    FirebaseAppL: () => (T.FirebaseAppL = dart.constFn(dart.legacy(firebase_core.FirebaseApp)))(),
+    FutureBuilderOfFirebaseAppL: () => (T.FutureBuilderOfFirebaseAppL = dart.constFn(async$.FutureBuilder$(T.FirebaseAppL())))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    UserL: () => (T.UserL = dart.constFn(dart.legacy(firebase_auth.User)))(),
+    StreamBuilderOfUserL: () => (T.StreamBuilderOfUserL = dart.constFn(async$.StreamBuilder$(T.UserL())))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    AsyncSnapshotL: () => (T.AsyncSnapshotL = dart.constFn(dart.legacy(async$.AsyncSnapshot)))(),
+    BuildContextLAndAsyncSnapshotLToWidgetL: () => (T.BuildContextLAndAsyncSnapshotLToWidgetL = dart.constFn(dart.fnType(T.WidgetL(), [T.BuildContextL(), T.AsyncSnapshotL()])))(),
+    StatefulWidgetL: () => (T.StatefulWidgetL = dart.constFn(dart.legacy(framework.StatefulWidget)))(),
+    BuildContextLAndAsyncSnapshotLToStatefulWidgetL: () => (T.BuildContextLAndAsyncSnapshotLToStatefulWidgetL = dart.constFn(dart.fnType(T.StatefulWidgetL(), [T.BuildContextL(), T.AsyncSnapshotL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 53,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 18,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 13,
+        [_Location_line]: 17,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 16,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 65,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 19,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.constList([C[17] || CT.C17], T._LocationL());
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[16] || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 26,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 17,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "stream",
+        [_Location_column]: 13,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 13,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 24,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 15,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.constList([C[36] || CT.C36], T._LocationL());
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[35] || CT.C35,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39], T._LocationL());
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 11,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.constList([C[42] || CT.C42], T._LocationL());
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[41] || CT.C41,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 56,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "future",
+        [_Location_column]: 7,
+        [_Location_line]: 13,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "builder",
+        [_Location_column]: 7,
+        [_Location_line]: 14,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.constList([C[45] || CT.C45, C[46] || CT.C46], T._LocationL());
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[44] || CT.C44,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 12,
+        [_Location_file]: "file:///C:/Users/Ali-Asus/Desktop/satis/benden_al/lib/pages/landingPage.dart"
+      });
+    }
+  }, false);
+  var C = Array(47).fill(void 0);
+  var I = ["package:benden_al/pages/landingPage.dart"];
+  var _initialization = dart.privateName(landingPage, "_initialization");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  landingPage.LandingPage = class LandingPage extends framework.StatelessWidget {
+    build(context) {
+      return new (T.FutureBuilderOfFirebaseAppL()).new({future: this[_initialization], builder: dart.fn((context, snapshot) => {
+          if (dart.test(snapshot.hasError)) {
+            return new scaffold.Scaffold.new({body: new basic.Center.new({child: new text.Text.new("Error: " + dart.str(snapshot.error), {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6});
+          }
+          if (snapshot.connectionState == async$.ConnectionState.done) {
+            return new (T.StreamBuilderOfUserL()).new({stream: firebase_auth.FirebaseAuth.instance.authStateChanges(), builder: dart.fn((context, streamSnapshot) => {
+                if (dart.test(streamSnapshot.hasError)) {
+                  return new scaffold.Scaffold.new({body: new basic.Center.new({child: new text.Text.new("Error: " + dart.str(streamSnapshot.error), {$creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15});
+                }
+                if (streamSnapshot.connectionState == async$.ConnectionState.active) {
+                  let _user = T.UserL().as(streamSnapshot.data);
+                  if (_user == null) {
+                    return new userLoginPage.UserLoginPage.new({$creationLocationd_0dea112b090073317d4: C[18] || CT.C18});
+                  } else {
+                    return new homePage.HomePage.new({$creationLocationd_0dea112b090073317d4: C[20] || CT.C20});
+                  }
+                }
+                return new scaffold.Scaffold.new({body: new basic.Center.new({child: new text.Text.new("Oturum Açılıyor...", {$creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27});
+              }, T.BuildContextLAndAsyncSnapshotLToWidgetL()), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30});
+          }
+          return new scaffold.Scaffold.new({body: new basic.Center.new({child: new text.Text.new("Uygulama Başlatılıyor...", {$creationLocationd_0dea112b090073317d4: C[34] || CT.C34}), $creationLocationd_0dea112b090073317d4: C[37] || CT.C37}), $creationLocationd_0dea112b090073317d4: C[40] || CT.C40});
+        }, T.BuildContextLAndAsyncSnapshotLToStatefulWidgetL()), $creationLocationd_0dea112b090073317d4: C[43] || CT.C43});
+    }
+  };
+  (landingPage.LandingPage.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[_initialization] = firebase_core.Firebase.initializeApp();
+    landingPage.LandingPage.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = landingPage.LandingPage.prototype;
+  dart.addTypeTests(landingPage.LandingPage);
+  dart.addTypeCaches(landingPage.LandingPage);
+  dart.setMethodSignature(landingPage.LandingPage, () => ({
+    __proto__: dart.getMethods(landingPage.LandingPage.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(landingPage.LandingPage, I[0]);
+  dart.setFieldSignature(landingPage.LandingPage, () => ({
+    __proto__: dart.getFields(landingPage.LandingPage.__proto__),
+    [_initialization]: dart.finalFieldType(dart.legacy(async.Future$(dart.legacy(firebase_core.FirebaseApp))))
+  }));
+  dart.trackLibraries("packages/benden_al/pages/landingPage.dart", {
+    "package:benden_al/pages/landingPage.dart": landingPage
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["landingPage.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAU4B;AACxB,YAAO,oDACG,gCACC,SAAC,SAAS;AACjB,wBAAI,AAAS,QAAD;AACV,kBAAO,kCACC,6BACG,kBAAK,AAA0B,qBAAhB,AAAS,QAAD;;AAKpC,cAAI,AAAS,AAAgB,QAAjB,oBAAoC;AAC9C,kBAAO,6CACgB,AAAS,iEACrB,SAAC,SAAS;AACjB,8BAAI,AAAe,cAAD;AAChB,wBAAO,kCACC,6BACG,kBAAK,AAAgC,qBAAtB,AAAe,cAAD;;AAK1C,oBAAI,AAAe,AAAgB,cAAjB,oBAAoC;AAC/C,2CAAQ,AAAe,cAAD;AAE3B,sBAAI,AAAM,KAAD;AACP,0BAAO;;AAEP,0BAAO;;;AAIX,sBAAO,kCACC,6BACG,kBACL;;;AAQZ,gBAAO,kCACC,6BACG,kBACL;;IAMZ;;;;IAzD0B,wBAA2B;;;EA0DvD","file":"../../../../../../../packages/benden_al/pages/landingPage.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__landingPage: landingPage
+  };
+}));
+
+//# sourceMappingURL=landingPage.dart.lib.js.map

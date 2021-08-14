@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Ali-Asus\\Desktop\\satis\\benden_al\\build\\multi_image_picker\\intermediates\\res\\merged\\release\\interpolator-v21\\mtrl_fast_out_slow_in.xml",
+        "source": "C:\\Users\\Ali-Asus\\.gradle\\caches\\transforms-2\\files-2.1\\987a29d9e31d5254ce24e605a32f4ff3\\material-1.0.0\\res\\interpolator-v21\\mtrl_fast_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ali-Asus\\Desktop\\satis\\benden_al\\build\\multi_image_picker\\intermediates\\res\\merged\\release\\interpolator-v21\\mtrl_linear_out_slow_in.xml",
+        "source": "C:\\Users\\Ali-Asus\\.gradle\\caches\\transforms-2\\files-2.1\\987a29d9e31d5254ce24e605a32f4ff3\\material-1.0.0\\res\\interpolator-v21\\mtrl_linear_out_slow_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ali-Asus\\Desktop\\satis\\benden_al\\build\\multi_image_picker\\intermediates\\res\\merged\\release\\interpolator-v21\\mtrl_fast_out_linear_in.xml",
+        "source": "C:\\Users\\Ali-Asus\\.gradle\\caches\\transforms-2\\files-2.1\\987a29d9e31d5254ce24e605a32f4ff3\\material-1.0.0\\res\\interpolator-v21\\mtrl_fast_out_linear_in.xml"
+    }
+]
